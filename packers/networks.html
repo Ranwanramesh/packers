@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Service Network - Swastik Packers & Movers</title>
+    <meta name="description" content="Explore our extensive service network across India. We have partnerships with local moving experts in over 100+ cities to ensure seamless relocation services.">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .network-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .network-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .network-region-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .network-region-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .region-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f1f5f9;
+        }
+
+        .region-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), #6366f1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .region-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        .cities-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cities-list li {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .cities-list li::before {
+            content: '\f3c5';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: #10b981;
+            margin-right: 0.75rem;
+            font-size: 0.875rem;
+        }
+
+        .coverage-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .coverage-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .coverage-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), #6366f1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .hero-section {
+            padding: 120px 0 80px;
+            background-color: #f9fafb; /* Light background */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge-modern {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 30px;
+            border: 1px solid rgba(209, 213, 219, 0.3);
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #4b5563;
+        }
+
+        .hero-badge-modern .badge-icon {
+            background: linear-gradient(135deg, var(--primary-color), #6366f1);
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .hero-title-modern {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .hero-title-modern .gradient-text {
+            background: linear-gradient(135deg, var(--primary-color), #6366f1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle-modern {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .hero-actions .btn-modern {
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            border: none;
+        }
+
+        .btn-primary-modern {
+            background: linear-gradient(135deg, var(--primary-color), #6366f1);
+            color: white;
+        }
+
+        .btn-primary-modern .btn-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-primary-modern .btn-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s, height 0.5s;
+            z-index: 1;
+        }
+
+        .btn-primary-modern:hover .btn-glow {
+            width: 200%;
+            height: 200%;
+        }
+
+        .btn-secondary-modern {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary-modern:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Remove animation classes for simplicity */
+        .animate-fade-in,
+        .animate-slide-up,
+        .animate-slide-up-delay,
+        .animate-fade-in-delay {
+            animation: none !important;
+        }
+
+        /* Minimalistic Hero Section Styles */
+        .hero-section .hero-badge-modern,
+        .hero-section .hero-badge-modern .badge-pulse {
+            display: none; /* Hide badge and pulse for minimalistic look */
+        }
+
+        .hero-section .hero-title-modern {
+            font-size: 3rem; /* Slightly smaller title */
+            margin-bottom: 10px;
+        }
+
+        .hero-section .hero-subtitle-modern {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        .hero-section .hero-actions .btn-modern {
+            padding: 10px 24px;
+            font-size: 1rem;
+        }
+
+        /* Specific adjustments for the network page */
+        .networks-hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .networks-hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 25px;
+        }
+
+        .btn-warning {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .btn-warning:hover {
+            background-color: #5a67d8; /* Darker shade of primary */
+            border-color: #5a67d8;
+        }
+
+        @media (max-width: 768px) {
+            .network-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .network-region-card {
+                padding: 1.5rem;
+            }
+
+            .coverage-card {
+                padding: 2rem;
+            }
+
+            .coverage-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2.8rem;
+            }
+
+            .hero-section {
+                padding: 80px 0 50px;
+            }
+
+            .hero-title-modern {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle-modern {
+                font-size: 1rem;
+            }
+
+            .hero-actions .btn-modern {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-icon me-2">
+                    <i class="fas fa-truck text-primary"></i>
+                </div>
+                <div>
+                    <h5 class="mb-0 fw-bold text-dark">Swastik Packers</h5>
+                    <small class="text-muted">& Movers</small>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-medium" href="networks.html">Networks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <div class="hero-badge-modern">
+                        <div class="badge-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <span>100+ Cities Coverage</span>
+                    </div>
+
+                    <h1 class="hero-title-modern">
+                        Our Service <span class="gradient-text">Network</span> Across India
+                    </h1>
+                    <p class="hero-subtitle-modern mx-auto">We have an extensive network across major cities, ensuring reliable service wherever you need to move</p>
+
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn btn-warning btn-lg">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            Find Local Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Network Regions Section -->
+    <section id="network-coverage" class="network-section">
+        <div class="container">
+            <div class="network-grid">
+                <!-- Major Cities -->
+                <div class="network-region-card">
+                    <div class="region-header">
+                        <div class="region-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="region-title">Major Cities</h3>
+                    </div>
+                    <ul class="cities-list">
+                        <li>Mumbai</li>
+                        <li>Delhi</li>
+                        <li>Bangalore</li>
+                        <li>Chennai</li>
+                        <li>Kolkata</li>
+                        <li>Pune</li>
+                    </ul>
+                </div>
+
+                <!-- North India -->
+                <div class="network-region-card">
+                    <div class="region-header">
+                        <div class="region-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="region-title">North India</h3>
+                    </div>
+                    <ul class="cities-list">
+                        <li>Chandigarh</li>
+                        <li>Gurgaon</li>
+                        <li>Noida</li>
+                        <li>Jaipur</li>
+                        <li>Lucknow</li>
+                        <li>Amritsar</li>
+                    </ul>
+                </div>
+
+                <!-- South India -->
+                <div class="network-region-card">
+                    <div class="region-header">
+                        <div class="region-icon">
+                            <i class="fas fa-compass"></i>
+                        </div>
+                        <h3 class="region-title">South India</h3>
+                    </div>
+                    <ul class="cities-list">
+                        <li>Hyderabad</li>
+                        <li>Coimbatore</li>
+                        <li>Kochi</li>
+                        <li>Mysore</li>
+                        <li>Thiruvananthapuram</li>
+                        <li>Vizag</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nationwide Coverage Section -->
+    <section class="coverage-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="coverage-card">
+                        <h2 class="section-title mb-4">Nationwide Coverage</h2>
+                        <p class="lead text-muted mb-0">Our extensive network covers over 100+ cities across India. We have partnerships with local moving experts in every major city to ensure seamless relocation services no matter where you're moving.</p>
+
+                        <div class="coverage-stats">
+                            <div class="stat-card">
+                                <div class="stat-number">100+</div>
+                                <div class="stat-label">Cities Covered</div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Partner Locations</div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Support Available</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="fw-bold mb-2">Ready to Move? We're Here to Help!</h3>
+                    <p class="mb-0">Get in touch with our experts for a personalized moving solution.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="contact.html" class="btn btn-warning btn-lg">
+                        <i class="fas fa-phone me-2"></i>
+                        Contact Us Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="logo-icon me-2">
+                            <i class="fas fa-truck text-primary"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0 fw-bold">Swastik Packers & Movers</h5>
+                            <small class="text-muted">Professional Moving Services</small>
+                        </div>
+                    </div>
+                    <p class="text-light">Your trusted partner for safe, reliable, and affordable moving solutions. We make relocation stress-free with our professional services and 24/7 customer support.</p>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="networks.html" class="text-light text-decoration-none">Networks</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Our Services</h6>
+                    <ul class="list-unstyled">
+                        <li>House Relocation</li>
+                        <li>Office Relocation</li>
+                        <li>Car Transportation</li>
+                        <li>Packing & Unpacking</li>
+                        <li>Storage & Warehousing</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 mb-4">
+                    <h6 class="fw-bold mb-3">Contact Info</h6>
+                    <div class="contact-info">
+                        <p class="mb-2">
+                            <i class="fas fa-phone me-2 text-primary"></i>
+                            <a href="tel:+919992318883" class="text-light text-decoration-none">+91-9992318883</a>
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-envelope me-2 text-primary"></i>
+                            <a href="mailto:info@swastikpackersandmovers.com" class="text-light text-decoration-none">info@swastikpackersandmovers.com</a>
+                        </p>
+                        <p class="mb-0">
+                            <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                            123 Business Center, Commercial Street,<br>
+                            Mumbai - 400001
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Swastik Packers and Movers. All rights reserved. | Website: swastikpackersandmovers.com</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
